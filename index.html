@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CALENDULA</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/style.css" />
+	<meta name="robots" content="index">
+</head>
+
+<body>
+	<div class="this">
+		
+		<div class="perspective">
+			<div class="sq"></div>
+			<div class="s1"></div>
+			<div class="s2"></div>
+			<div class="s3"></div>
+			<div class="s4"></div>
+		</div>
+		<div class="text">
+			<svg id="Ebene_1" version="1.1" viewbox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
+				<style>
+					<![CDATA[
+
+					text {
+						filter: url(#filter);
+						fill: black;
+						font-family: 'Share Tech Mono', sans-serif;
+						font-size: 100px;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+					}
+					]]>
+				</style>
+				<filter id="filter">
+					<feflood flood-color="white" result="white"></feflood>
+					<feflood flood-color="red" result="flood1"></feflood>
+					<feflood flood-color="limegreen" result="flood2"></feflood>
+					<feoffset dx="13" dy="0" in="SourceGraphic" result="off1a"></feoffset>
+					<feoffset dx="9" dy="0" in="SourceGraphic" result="off1b"></feoffset>
+					<feoffset dx="-9" dy="0" in="SourceGraphic" result="off2a"></feoffset>
+					<feoffset dx="-13" dy="0" in="SourceGraphic" result="off2b"></feoffset>
+					<fecomposite in="flood1" in2="off1a" operator="in" result="comp1"></fecomposite>
+					<fecomposite in="flood2" in2="off2a" operator="in" result="comp2"></fecomposite>
+					<femerge result="merge1" width="100%" x="0">
+						<femergenode in="white"></femergenode>
+						<femergenode in="comp1"></femergenode>
+						<femergenode in="off1b"></femergenode>
+						<animate attributename="y" dur="4s" id="y" keytimes='0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1' repeatcount="indefinite" values='104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'></animate>
+						<animate attributename="height" dur="4s" id="h" keytimes='0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1' repeatcount="indefinite" values='10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'></animate>
+					</femerge>
+					<femerge height="65px" result="merge2" width="100%" x="0" y="60px">
+						<femergenode in="white"></femergenode>
+						<femergenode in="comp2"></femergenode>
+						<femergenode in="off2b"></femergenode>
+						<animate attributename="y" dur="4s" id="y" keytimes='0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1' repeatcount="indefinite" values='103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;'></animate>
+						<animate attributename="height" dur="4s" id="h" keytimes='0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 1' repeatcount="indefinite" values='0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'></animate>
+					</femerge>
+					<femerge>
+						<femergenode in="SourceGraphic"></femergenode>
+						<femergenode in="merge1"></femergenode>
+						<femergenode in="merge2"></femergenode>
+					</femerge>
+				</filter>
+				<g>
+					<!-- <a href="http://bit.ly/7condition"> -->
+					<a href="http://bit.ly/xcondition">
+						<text x="-30" y="100">
+							CALENDULA
+						</text>
+					</a>
+				</g>
+			</svg>
+		</div> 
+	</div>
+
+	<audio autoplay src="audio/audio.mp3"></audio>
+
+</body>
+</html>
